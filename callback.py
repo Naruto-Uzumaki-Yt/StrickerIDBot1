@@ -30,7 +30,7 @@ def callback_handler(bot, q):
     📚 Lɪʙʀᴀʀʏ: Pʏʀᴏɢʀᴀᴍ
     💻 Lᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 𝟹
     ⚙️ Sᴇʀᴠᴇʀ: <a href="https://render.com/">Rᴇɴᴅᴇʀ</a> 
-    🚀 Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <a href="https://t.me/BotsServerDead">Sᴛᴀʙʟᴇ ✅</a
+    🚀 Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <a href="https://t.me/BotsServerDead">Sᴛᴀʙʟᴇ ✅</a>
     👨‍💻 Pʀᴏɢʀᴀᴍᴍᴇʀ: <a href="https://t.me/Mr_Mohammed_29">Mᴏʜᴀᴍᴍᴇᴅ</a>
     📢 Uᴘᴅᴀᴛᴇs: <a href="https://t.me/Anime_UpdatesAU">Cʟɪᴄᴋ Hᴇʀᴇ</a>
     🌐 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ: <a href="https://github.com/MD-Developer-yt/StrickerIDBot">Gɪᴛʜᴜʙ</a>
