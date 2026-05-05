@@ -7,14 +7,12 @@
 from database import add_sticker
 from buttons import copy_buttons
 
-# NOTE: No waiting_users needed (FIXED VERSION)
-
 def ask_sticker(_, msg):
     msg.reply_text("𝖭𝗈𝗐 𝖲𝖾𝗇𝖽 𝖠 𝖲𝗍𝗋𝗂𝖼𝗄𝖾𝗋")
 
 def handle_sticker(_, msg):
 
-    if not msg.sticker:
+    if not msg or not msg.sticker:
         return
 
     uid = msg.from_user.id
