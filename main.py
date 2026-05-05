@@ -20,6 +20,11 @@ from sticker import ask_sticker, handle_sticker
 from callback import callback_handler
 from database import get_stats, get_all_users
 
+import time
+
+START_TIME = time.time()
+VERSION = "1.0.0" 
+
 bot = Client("StickerBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 broadcast_mode = set()
