@@ -18,8 +18,21 @@ def callback_handler(bot, q):
     data = q.data
 
     if data == "home":
-        q.message.edit_text("• ʜᴏᴍᴇ •", reply_markup=start_buttons())
+        q.message.delete()
+        q.message.reply_photo(
+            photo=START_PIC,
+            caption=f"""
+    ᴡᴇʟᴄᴏᴍᴇ ʙᴀᴄᴋ {q.from_user.first_name} ♡, ᴛᴏ ᴀᴅᴠᴀɴᴄᴇᴅ sᴛʀɪᴄᴋᴇʀ ɪᴅ ʙᴏᴛ
 
+    ›› I ᴄᴀɴ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪᴄᴋᴇʀ ᴛᴏ ɢɪᴠᴇ ɪᴅ 
+ 
+    ›› Jᴜsᴛ sᴇɴᴅ ᴛʜᴇ Sᴛɪᴄᴋᴇʀ ᴛʜᴇɴ sᴇᴇ ᴍʏ ᴍᴀɢɪᴄ
+
+    ›› ᴘᴏᴡᴇʀᴇᴅ ʙʏ : @Anime_UpdatesAU 
+    """,
+           reply_markup=start_buttons()
+       )
+        
     elif data == "help":
         q.message.edit_text(
             "𝗵𝗼𝘄 𝘁𝗼 𝘀𝗲𝗻𝗱 𝘀𝘁𝗶𝗰𝗸𝗲𝗿\n\n Use /stickerid 𝖼𝗈𝗆𝗆𝗆𝖺𝖽 𝖺𝖿𝗍𝖾𝗋 𝗌𝖾𝗇𝖽 𝗌𝗍𝗂𝖼𝗄𝖾𝗋",
@@ -53,7 +66,7 @@ def callback_handler(bot, q):
 
     elif data == "updates":
         q.message.edit_text(
-            " ›› 𝘕𝘦𝘸 𝘍𝘦𝘢𝘵𝘶𝘳𝘦𝘴 𝘊𝘰𝘮𝘪𝘯𝘨 𝘚𝘰𝘰𝘯 𝘚𝘵𝘢𝘺 𝘜𝘱𝘥𝘢𝘵𝘦𝘥",
+            " ›› 𝘕𝘦𝘸 𝘍𝘦𝘢𝘵𝘶𝘳𝘦𝘴 𝘊𝘰𝘮𝘪𝘯𝘨 𝘚𝘰𝘰𝘯 𝘚𝘵𝘢𝘺 𝘜𝘱𝘥𝘢𝘵𝘦𝘥 𝘰𝘯 @Anime_UpdatesAU",
             reply_markup=home()
         )
 
