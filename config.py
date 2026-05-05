@@ -12,7 +12,7 @@ API_HASH = os.environ.get("API_HASH", "")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
 OWNER_ID = int(os.environ.get("OWNER_ID", "0"))
-OWNER_NAME = os.environ.get("OWNER_NAME", "Owner")
+OWNER_NAME = os.environ.get("OWNER_NAME", "Mᴏʜᴀᴍᴍᴇᴅ")
 
 START_PIC = os.environ.get(
     "START_PIC",
