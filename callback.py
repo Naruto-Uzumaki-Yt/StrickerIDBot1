@@ -69,8 +69,8 @@ def callback_handler(bot, q):
             reply_markup=home()
         )
 
-    elif data.startswith("copy"):
-        q.answer("Cᴏᴘɪᴇᴅ ✔", show_alert=True)
+    elif data == "copy_id":
+        q.answer("Cᴏᴘʏ ᴛʜᴇ ID ғʀᴏᴍ ᴍᴇssᴀɢᴇ ᴀʙᴏᴠᴇ 👆", show_alert=True)
 
 
 # ===================== ADDED SAFETY FIX (ONLY ADDITION) =====================
