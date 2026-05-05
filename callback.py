@@ -8,6 +8,10 @@ from buttons import start_buttons, home
 from database import get_stats
 from config import OWNER_NAME, OWNER_ID
 
+import time
+from main import START_TIME, VERSION
+
+
 
 def callback_handler(bot, q):
 
@@ -57,17 +61,32 @@ def callback_handler(bot, q):
         if q.from_user.id != OWNER_ID:
             q.answer("Yᴏᴜ Aʀᴇ Nᴏᴛ Mʏ Mᴀsᴛᴇʀ", show_alert=True)
             return
-
+   
+        start_ping = time.time()
         users, stickers = get_stats()
+        ping = round((time.time() - start_ping) * 1000, 2)
+
+        uptime_sec = int(time.time() - START_TIME)
+
+        days = uptime_sec // 86400
+        hours = (uptime_sec % 86400) // 3600
+        minutes = (uptime_sec % 3600) // 60
+        seconds = uptime_sec % 60
+
+        uptime = f"{days}d {hours}h {minutes}m {seconds}s"
+
         q.message.edit_text(
             f"""
-📊 𝗕𝗼𝘁𝘀 𝗦𝘁𝗮𝘁𝘀
+📊 𝗕𝗼𝘁 𝗦𝘁𝗮𝘁𝘀
 
 👥 Tᴏᴛᴀʟ Usᴇʀs: {users}
 🎯 Tᴏᴛᴀʟ Sᴛɪᴄᴋᴇʀs: {stickers}
+⚡ Pɪɴɢ: {ping} ms
+⏱ Uᴘᴛɪᴍᴇ: {uptime}
+🧬 Vᴇʀsɪᴏɴ: {VERSION}
 """,
-            reply_markup=home()
-        )
+        reply_markup=home()
+    )
 
     elif data == "copy_id":
         q.answer("Cᴏᴘʏ ᴛʜᴇ ID ғʀᴏᴍ ᴍᴇssᴀɢᴇ ᴀʙᴏᴠᴇ 👆", show_alert=True)
