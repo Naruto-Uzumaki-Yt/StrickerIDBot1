@@ -5,6 +5,7 @@
 # ------------------------- #
 
 from pyrogram import Client, filters
+import time
 
 from config import API_ID, API_HASH, BOT_TOKEN, OWNER_ID
 from keep_alive import keep_alive
