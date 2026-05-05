@@ -6,10 +6,8 @@
 
 from buttons import start_buttons, home
 from database import get_stats
-from config import OWNER_NAME, OWNER_ID
+from config import OWNER_NAME, OWNER_ID, 
 from utils import START_TIME, VERSION
-
-
 
 def callback_handler(bot, q):
 
