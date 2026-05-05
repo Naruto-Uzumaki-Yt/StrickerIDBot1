@@ -6,12 +6,6 @@
 
 from pyrogram import Client, filters
 
-# ------------------------- #
-# Don't Remove Credit 
-# Ask Doubt @AU_Bot_Discussion 
-# Owner @Mr_Mohammed_29 
-# ------------------------- #
-
 from config import API_ID, API_HASH, BOT_TOKEN, OWNER_ID
 from keep_alive import keep_alive
 
@@ -25,12 +19,6 @@ from start import start_handler
 from sticker import ask_sticker, handle_sticker
 from callback import callback_handler
 from database import get_stats, get_all_users
-
-# ------------------------- #
-# Don't Remove Credit 
-# Ask Doubt @AU_Bot_Discussion 
-# Owner @Mr_Mohammed_29 
-# ------------------------- #
 
 bot = Client("StickerBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
@@ -58,7 +46,9 @@ def stats(_, msg):
         return
 
     users, stickers = get_stats()
-    msg.reply_text(f"👥 Tᴏᴛᴀʟ Usᴇʀs:: {users}\n🎯 Tᴏᴛᴀʟ Sᴛɪᴄᴋᴇʀs: {stickers}")
+    msg.reply_text(
+        f"👥 Tᴏᴛᴀʟ Usᴇʀs: {users}\n🎯 Tᴏᴛᴀʟ Sᴛɪᴄᴋᴇʀs: {stickers}"
+    )
 
 # ================= BROADCAST (OWNER ONLY) =================
 @bot.on_message(filters.command("broadcast"))
@@ -70,8 +60,10 @@ def broadcast(_, msg):
     broadcast_mode.add(msg.from_user.id)
     msg.reply_text("📢 Sᴇɴᴅ Mᴇssᴀɢᴇ Tᴏ Bʀᴏᴀᴅᴄᴀsᴛ")
 
-@bot.on_message(filters.text)
+# ================= BROADCAST MESSAGE HANDLER =================
+@bot.on_message(filters.private & filters.text)
 def send_broadcast(_, msg):
+
     if msg.from_user.id not in broadcast_mode:
         return
 
@@ -87,7 +79,9 @@ def send_broadcast(_, msg):
         except:
             fail += 1
 
-    msg.reply_text(f"📢 𝗗𝗼𝗻𝗲\n✔ {ok}\n❌ {fail}")
+    msg.reply_text(
+        f"📢 𝗗𝗼𝗻𝗲\n✔ Sent: {ok}\n❌ Failed: {fail}"
+    )
 
     broadcast_mode.remove(msg.from_user.id)
 
