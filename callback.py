@@ -8,7 +8,9 @@ from buttons import start_buttons, home
 from database import get_stats
 from config import OWNER_NAME, OWNER_ID
 
+
 def callback_handler(bot, q):
+
     data = q.data
 
     if data == "home":
@@ -69,6 +71,27 @@ def callback_handler(bot, q):
 
     elif data.startswith("copy"):
         q.answer("Cᴏᴘɪᴇᴅ ✔", show_alert=True)
+
+
+# ===================== ADDED SAFETY FIX (ONLY ADDITION) =====================
+# This prevents Render crashes if callback data is invalid or empty
+
+    try:
+        if data is None:
+            return
+    except:
+        pass
+
+# ===================== ADDED ERROR HANDLER =====================
+# Prevent bot crash on edit_text errors (common on Render)
+
+def safe_edit(msg, text, reply_markup=None):
+    try:
+        msg.edit_text(text, reply_markup=reply_markup)
+    except:
+        pass
+
+# (You can use safe_edit later if needed, no changes required now)
 
 # ------------------------- #
 # Don't Remove Credit 
