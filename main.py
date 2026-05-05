@@ -50,10 +50,29 @@ def stats(_, msg):
         msg.reply_text("Yᴏᴜ Aʀᴇ Nᴏᴛ Mʏ Mᴀsᴛᴇʀ.")
         return
 
+    start_ping = time.time()
     users, stickers = get_stats()
-    msg.reply_text(
-        f"👥 Tᴏᴛᴀʟ Usᴇʀs: {users}\n🎯 Tᴏᴛᴀʟ Sᴛɪᴄᴋᴇʀs: {stickers}"
-    )
+    ping = round((time.time() - start_ping) * 1000, 2)
+
+    uptime_sec = int(time.time() - START_TIME)
+
+    # format uptime
+    days = uptime_sec // 86400
+    hours = (uptime_sec % 86400) // 3600
+    minutes = (uptime_sec % 3600) // 60
+    seconds = uptime_sec % 60
+
+    uptime = f"{days}d {hours}h {minutes}m {seconds}s"
+
+    msg.reply_text(f"""
+📊 𝗕𝗼𝘁 𝗦𝘁𝗮𝘁𝘀
+
+👥 Tᴏᴛᴀʟ Usᴇʀs: {users}
+🎯  Tᴏᴛᴀʟ Sᴛɪᴄᴋᴇʀs: {stickers}
+⚡ Pɪɴɢ: {ping} ms
+⏱ Uᴘᴛɪᴍᴇ: {uptime}
+🧬 Vᴇʀsɪᴏɴ: {VERSION}
+""")
 
 # ================= BROADCAST (OWNER ONLY) =================
 @bot.on_message(filters.command("broadcast"))
