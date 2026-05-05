@@ -34,7 +34,7 @@ def home():
 
 def copy_buttons(file_id):
     return InlineKeyboardMarkup([
-        [InlineKeyboardButton("• ᴄᴏᴘʏ ғɪʟᴇ ɪᴅ •", callback_data=f"copy|{file_id}")],
+        [InlineKeyboardButton("• ᴄᴏᴘʏ ғɪʟᴇ ɪᴅ •", callback_data="copy_id")],
         [InlineKeyboardButton("• ʜᴏᴍᴇ •", callback_data="home")]
     ])
 
