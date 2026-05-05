@@ -31,12 +31,12 @@ def start_handler(bot, message):
         await m.delete()
 
         # ================= STICKER =================
-        await message.reply_sticker(
+        sticker_msg = await message.reply_sticker(
             "CAACAgUAAxkBAAEXmw5plIsM5lyaJfj5NwNp13QSrbW9NQACnBsAAlztqVYRMk2x1suA_B4E"
         )
 
-        # ================= START MESSAGE =================
-        await message.reply_photo(
+        # ================= START MESSAGE (MAIN UI) =================
+        await sticker_msg.reply_photo(
             photo=START_PIC,
             caption=f"""
 ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name} ♡, ᴛᴏ ᴀᴅᴠᴀɴᴄᴇᴅ sᴛʀɪᴄᴋᴇʀ ɪᴅ ʙᴏᴛ
