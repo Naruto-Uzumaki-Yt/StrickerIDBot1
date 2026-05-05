@@ -22,8 +22,8 @@ def callback_handler(bot, q):
 
     elif data == "about":
 
-    q.message.edit_text(
-        """
+        q.message.edit_text(
+            """
     ℹ️ <b>Sticker ID Bot</b>
 
     🤖 Nᴀᴍᴇ : <a href="http://t.me/AU_StickerID_bot">AU Sticker ID Bot</a>
@@ -34,10 +34,10 @@ def callback_handler(bot, q):
     👨‍💻 Pʀᴏɢʀᴀᴍᴍᴇʀ: <a href="https://t.me/Mr_Mohammed_29">Mᴏʜᴀᴍᴍᴇᴅ</a>
     📢 Uᴘᴅᴀᴛᴇs: <a href="https://t.me/Anime_UpdatesAU">Cʟɪᴄᴋ Hᴇʀᴇ</a>
     🌐 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ: <a href="https://github.com/MD-Developer-yt/StrickerIDBot">Gɪᴛʜᴜʙ</a>
-    """,
-        reply_markup=home(),
-        disable_web_page_preview=True
-    )
+            """,
+            reply_markup=home(),
+            disable_web_page_preview=True
+       )
 
     elif data == "owner":
         q.message.edit_text(
