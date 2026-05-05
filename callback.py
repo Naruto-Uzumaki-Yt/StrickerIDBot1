@@ -7,9 +7,7 @@
 from buttons import start_buttons, home
 from database import get_stats
 from config import OWNER_NAME, OWNER_ID
-
-import time
-from main import START_TIME, VERSION
+from utils import START_TIME, VERSION
 
 
 
