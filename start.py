@@ -32,7 +32,7 @@ def start_handler(bot, message):
 
         # ================= STICKER =================
         sticker_msg = await message.reply_sticker(
-            "CAACAgUAAxkBAAEXmw5plIsM5lyaJfj5NwNp13QSrbW9NQACnBsAAlztqVYRMk2x1suA_B4E"
+            "CAACAgQAAxkBAAPZafuA9gQjLstGU0j8kmlDj2-P2A0AAqoaAALVH9BRmAWPD58ZL6keBA"
         )
 
         # ================= START MESSAGE (MAIN UI) =================
